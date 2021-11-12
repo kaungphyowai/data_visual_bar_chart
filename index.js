@@ -12,13 +12,11 @@ function drawSvg(data){
                   .attr('width', w)
                   .attr('height', h);
     svg.selectAll('rect')
-                        .data(data.data)
-                        .enter()
-                        .append('rect')
-                        .attr("x", (d, i) => i * 30)
-                        .attr('y', (d, i) => {
-
-                        })
-                        .attr('width', 25)
-                        .attr('height', (d, i) => d[1])
+         .data(data.data)
+         .enter()
+         .append('rect')
+         .attr("x", (d, i) => i * 30)
+         .attr('y', (d, i) => h - d[1])
+         .attr('width', 25)
+         .attr('height', (d, i) => d[1])
 }
